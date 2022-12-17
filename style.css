@@ -1,0 +1,206 @@
+@font-face {
+    font-family: 'Kanit', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;500;700&display=swap');
+}
+
+* {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.container_start_end {
+    position: absolute;
+
+
+    width: 20vw;
+    height: 5vw;
+    top: 2vw;
+    left: 40vw;
+    background: url(img/1.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-size: 100%;
+    animation-name: animation1;
+    animation-duration: 2s;
+
+}
+@keyframes animation1 {
+    0%{   top: -8vw;}
+    100%{   top: 2vw;}
+  }
+
+
+  .container_number {
+    position: absolute;
+    width: 15vw;
+    height: 5vw;
+    top: 2vw;
+    right:  5vw;
+    background: url(img/2.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-size: 100%;
+    animation-name: animation2;
+    animation-duration: 2s;
+
+}
+@keyframes animation2 {
+    0%{    right:  -35vw;}
+    100%{    right:  5vw;}
+  }
+
+  .container_zombie {
+ 
+        position: absolute;
+    
+    
+        width: 20vw;
+        height: 7vw;
+        top: 2vw;
+        left: 40vw;
+        background: url(img/3.png) no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-position: center;
+        background-size: 100%;
+        animation-name: animation1;
+        animation-duration: 2s;
+    
+    }
+@keyframes animation4 {
+    0%{    right:  -35vw;}
+    100%{    right:  5vw;}
+  }
+.container_zombie>.listtag{
+    top: 2vw;
+    left: 6vw;
+    width: 12vw;
+
+}
+.container_zombie>.listtag>.tag:nth-child(1){
+    text-align: left;
+    font-size: 1.1vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.container_number>img {
+    position: absolute;
+    top: 0.8vw;
+    left: 1.5vw;
+    width: 3vw;
+    height: 3vw;
+}
+.progress{
+    position: relative;
+    width: 100%;
+    border-radius: 0.5vw;
+    height: 0.7vw;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+.data{
+    position: absolute;
+    left: 0;
+    width: 90%;
+    height: 100%;   border-radius: 0.5vw;
+    background-color: red;
+}
+.w-img {
+    position: relative;
+    clip-path: polygon(0 23%, 50% 0, 100% 23%, 100% 77%, 50% 100%, 0 77%);
+    top: 0.7vw;
+    left: 0.3vw;
+    width: 5vw;
+    height: 5.5vw;
+
+}
+.w-img>img{
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4vw;
+    height: 4vw;
+    transform: translate(-50%,-50%) 
+}
+
+.container_start_end>.listtag{
+    top: 1.2vw;
+    left: 3.3vw;
+    width: 13vw;
+}
+.listtag {
+    position: absolute;
+    width: 8vw;
+    font-weight: bold;
+    top: 1vw;
+    left: 5vw;
+
+    color: white;
+    font-size: 0.8vw;
+    text-align: center;
+}
+
+.tag:nth-child(2) {
+    font-size: 1.3vw;
+}
+.tag>span{
+    font-size: 0.7vw;
+}
+.damage{
+    z-index: -99;
+   width: 100%;
+   height: 100%;
+   left: 50%;
+   top: 50%;
+   position: absolute;
+   opacity: 0.7;
+   
+   transform: translate(-50%,-50%)  scale(1);
+   animation: pulse 1s infinite;
+}
+.damage::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    /* แบบกรอบข้าง */
+    background: linear-gradient(90deg, rgba(255,0,0) 0%, rgba(255,255,255,0) 4%, rgba(255,255,255,0) 96%, rgba(255,0,0) 100%);
+   /* แบบวง */
+    /* background: radial-gradient(circle, rgba(255,255,255,0) 90%, rgba(255,0,0,1) 100%); */
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%,-50%)  scale(1);
+  }
+  50% {
+    transform: translate(-50%,-50%)  scale(1.1);
+  }
+  100% {
+    transform: translate(-50%,-50%)  scale(1);
+  }
+}
+
+
+.container_win {
+    width: 20vw;
+    height: 5vw;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+   
+}
